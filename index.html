@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[SYSTEM::LOG] - Recon Toolkit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="matrix-canvas"></canvas>
+
+    <main class="container">
+        <header>
+            <h1 id="main-title"></h1>
+            <p class="byline">Created by Moe M.</p>
+        </header>
+
+        <article class="post">
+            <p>This toolkit was created for the community to assist in initial reconnaissance.</p>
+            
+            <p>You can perform a live DNS lookup with the <a href="#" onclick="runCommandFromLink(event, 'scan ')" data-text="[scan]">scan</a> command, check server response time with <a href="#" onclick="runCommandFromLink(event, 'ping ')" data-text="[ping]">ping</a>, discover subdomains with <a href="#" onclick="runCommandFromLink(event, 'subscan ')" data-text="[subscan]">subscan</a>, or inspect HTTP headers with <a href="#" onclick="runCommandFromLink(event, 'headers ')" data-text="[headers]">headers</a>.</p>
+            
+            <p>The terminal below is your interface. Type `help` to see the full list of available commands.</p>
+        </article>
+
+        <div id="terminal">
+            <div id="terminal-output">
+                <p>Recon Toolkit [Version 8.0]</p>
+                <p>Type `help` for a list of available commands.</p>
+            </div>
+            <div class="prompt-line">
+                <span class="prompt">root@log:~#</span>
+                <input type="text" id="terminal-input" autocomplete="off" autofocus>
+            </div>
+        </div>
+
+        <footer>
+            <p>// End of Transmission //</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
